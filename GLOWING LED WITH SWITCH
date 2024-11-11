@@ -1,0 +1,22 @@
+int s=6;
+int x;
+int led=7;
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(9600);
+pinMode(6,INPUT);
+pinMode(7,OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  x=digitalRead(s);
+  Serial.println(x);
+if(x==0)
+{
+  digitalWrite(7,LOW);
+}
+else{
+  digitalWrite(7,LOW);
+}
+}
