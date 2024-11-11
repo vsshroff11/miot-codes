@@ -1,0 +1,27 @@
+Program Code: IR SENSOR
+
+int ledPin=13; 
+int inputPin=2; 
+int val=0; 
+void setup() 
+{ 
+pinMode(13,OUTPUT); 
+pinMode( inputPin, INPUT); 
+Serial.begin(9600); 
+} 
+void loop() 
+{ 
+val=digitalRead(inputPin); // check the pin status (High=1/Low=0) //Active Low 
+output 
+if(val==HIGH) 
+{ 
+Serial.print(“Object Absent\n"); 
+digitalWrite(13,LOW); 
+} 
+else 
+{ 
+Serial.print("Object Present\n"); 
+digitalWrite(13,HIGH); 
+} 
+} 
+
